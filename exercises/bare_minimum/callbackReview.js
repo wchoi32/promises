@@ -9,8 +9,8 @@ var request = require('request');
 var pluckFirstLineFromFile = function (filePath, callback) {
   // TODO
   fs.readFile(filePath, 'utf8', (err, data) => {
-  	if (err) { return callback(err) };
-	callback(err, data.split('\n')[0]);
+    if (err) { return callback(err); }
+    callback(err, data.split('\n')[0]);
   });
 };
 
@@ -18,8 +18,8 @@ var pluckFirstLineFromFile = function (filePath, callback) {
 var getStatusCode = function (url, callback) {
   // TODO
   request(url, (err, response) => {
-  	if (err) { return callback(err) };
-  	callback(err, response.statusCode);
+    if (err) { return callback(err); }
+    callback(err, response.statusCode);
   });
 };
 
